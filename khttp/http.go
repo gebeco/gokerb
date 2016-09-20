@@ -7,7 +7,7 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"github.com/jmckaskill/gokerb"
+	"gokerb"
 	"io"
 	"net"
 	"net/http"
@@ -28,7 +28,7 @@ type Transport struct {
 var (
 	// Error returned from Authenticate
 	ErrNoAuth = errors.New("khttp: no or invalid authorization header")
-	ErrHost = errors.New("khttp: no credential for provided host")
+	ErrHost   = errors.New("khttp: no credential for provided host")
 
 	negotiate       = "Negotiate "
 	basic           = "Basic "
